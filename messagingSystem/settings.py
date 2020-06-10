@@ -14,7 +14,7 @@ SECRET_KEY = 'nqu=9-=vppk7uosb8yh2px10mi@t3$y1))^bn&oehq@3#e^1ta'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://localhost:8000/', 'https://noams-messaging-app.herokuapp.com/']
 
 
 # Application definition
