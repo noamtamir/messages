@@ -24,3 +24,7 @@ Admin user can view, create, edit and delete all messages.
 
 ## Link to Swagger File for documentation to extended API
 [https://noam-messaging-app.herokuapp.com/swagger/](https://noams-messaging-app.herokuapp.com/swagger/)
+
+
+## Running localy
+When running localy, be sure to add dev.env file (no need for anything in it) to root directory. Runs with sqlite localy instead of postgres for quick and easy setup.
