@@ -1,1 +1,1 @@
-web: gunicorn noams-messaging-app.wsgi
+web: gunicorn messagingSystem.wsgi
