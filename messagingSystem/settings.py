@@ -1,9 +1,18 @@
 import os
 import django_heroku
+import dotenv
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# load environment variables from .env
+dev_dotenv_file = os.path.join(BASE_DIR, "dev.env")
+if os.path.isfile(dev_dotenv_file):
+    dotenv.load_dotenv(dev_dotenv_file)
+    DEBUG = True
+else:
+    DEBUG = False
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -11,10 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'nqu=9-=vppk7uosb8yh2px10mi@t3$y1))^bn&oehq@3#e^1ta'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
-ALLOWED_HOSTS = ['http://localhost:8000/', 'https://noams-messaging-app.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost', 'https://noams-messaging-app.herokuapp.com/']
 
 
 # Application definition
@@ -118,4 +125,5 @@ REST_FRAMEWORK = {
 }
 
 # Activate Django-Heroku.
-django_heroku.settings(locals())
+if not DEBUG:
+    django_heroku.settings(locals())
