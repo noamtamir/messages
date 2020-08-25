@@ -3,3 +3,5 @@ dev.env
 datadump.json
 db.sqlite3
 Procfile
+env/*
+venv/*

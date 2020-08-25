@@ -19,7 +19,7 @@ else:
 SECRET_KEY = 'nqu=9-=vppk7uosb8yh2px10mi@t3$y1))^bn&oehq@3#e^1ta'
 
 
-ALLOWED_HOSTS = ['localhost', 'https://noams-messaging-app.herokuapp.com/', 'https://django-messages.noamtamir.com/']
+ALLOWED_HOSTS = ['localhost', 'noams-messaging-app.herokuapp.com', 'messages-app.noamtamir.com']
 
 
 # Application definition
@@ -116,6 +116,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = '/home/admin/messages/static/'
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
