@@ -9,7 +9,7 @@ Optional to use UI via broswer.
 
 ## Messages Endpoint
 
-[https://messages-app.noamtamir.com//messages/](https://messages-app.noamtamir.com/messages/)
+[https://messages-app.noamtamir.com/messages/](https://messages-app.noamtamir.com/messages/)
 
 ## Authentication
 
